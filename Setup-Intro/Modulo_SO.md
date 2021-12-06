@@ -22,9 +22,9 @@ Por otro lado tenemos sistemas operativos de código abierto desarrollados y man
 
 Si bien todos los sistemas operativos permiten al usuario ajustar y modificar su funcionamiento con diferente nivel de detalle, Linux, al ser la opción de código abierto no comercial, es la que mayor control y transparencia da al usuario a la hora de definir cómo y qué quiere que haga el sistema operativo.
 
-## [El Hardware de una computadora](./Anexo_Hardware.md#Hardware)
+## [El Hardware de una computadora](./Anexo_Hardware.md)
 
-Si te interesa conocer los fundamentos de como funciona el hardware de una computadora y sus diferentes partes te invitamos a leer esta [sección](ver como linkear).
+Si te interesa conocer los fundamentos de como funciona el hardware de una computadora y sus diferentes partes te invitamos a leer esta [sección](./Anexo_Hardware.md).
 
 ## Estructura de archivos
 
@@ -50,7 +50,7 @@ La estructura de archivos (que son los contenedores de las secuencias de bits) s
 
 Sin embargo los discos físicos no son lo que vemos cuando usamos nuestro sistema operativo porque cada disco se puede partir en pedazos que funcionan para el sistema operativo como unidades diferentes. Por ejemplo, es común que cuando se instala un sistema operativo el mismo asigne parte del espacio físico del disco en particiones que usa en el arranque, como backup interno o como espacio de almacenamiento temporal (SWAP) y que no nos muestra (no tienen una letra asignada o no están "montadas"). 
 
-Siempre tiene que haber al menos una unidad que es donde el sistema operativo va a tener sus archivos principales (Windows que les asigna letras se suele llamar "C:" y en Linux es "/"). Además puede haber otras que usemos para cosas diferentes (por ejemplo guardar los archivos personales en una unidad aparte para que no se mezclen con las cosas del sistema operativo, como si fuese un backup). Cuando conectamos un pendrive (o un disco externo) el sistema operativo los ve como una unidad diferente y le asigna una letra (en Windows) o un punto de montura (en Linux). <!-- P2 -->
+Siempre tiene que haber al menos una unidad que es donde el sistema operativo va a tener sus archivos principales (Windows que les asigna letras lo suele llamar "C:" y en Linux es "/"). Además puede haber otras que usemos para cosas diferentes (por ejemplo guardar los archivos personales en una unidad aparte para que no se mezclen con las cosas del sistema operativo, como si fuese un backup). Cuando conectamos un pendrive (o un disco externo) el sistema operativo los ve como una unidad diferente y le asigna una letra (en Windows) o un punto de montura (en Linux). <!-- P2 -->
 
 En la siguiente imagen vemos un ejemplo (en Windows) de una computadora que tiene un único disco rígido (nombrado como "disco 0") que tiene tres unidades. Una esta reservada para el sistema y no se ve en el explorador de archivos, las otras dos figuran como unidades diferentes: el "Disco local C:" y el disco de "Datos D:". Como vemos además de la letra se les puede asignar un nombre descriptivo.
 
@@ -72,7 +72,7 @@ Para complicar más las cosas, en Windows se asume que el usuario no maneja los 
 
 #### Las carpetas
 
-Los archivos además de tener un nombre y una extensión están en algún lugar dentro de la estructura de carpetas que hay en cada unidad. Todo el contenido de la unidad está en el directorio 'Raíz' que en Windows es la letra de la unidad seguida por ":\", típicamente "C:\", en Linux "/" y (en mac no se)<!-- P3 -->. Dentro de esa carpeta raíz puede haber archivos, pero lo más usual es que haya solo carpetas, y dentro de esas carpetas puede haber más carpetas o archivos.
+Los archivos además de tener un nombre y una extensión están en algún lugar dentro de la estructura de carpetas que hay en cada unidad. Todo el contenido de la unidad está en el directorio 'Raíz' que en Windows es la letra de la unidad seguida por ":\", típicamente "C:\", en Linux "/" y (Mac comparte la mayor parte del funcionamiento interno con Linux porque está basado en Linux)<!-- P3 -->. Dentro de esa carpeta raíz puede haber archivos, pero lo más usual es que haya solo carpetas, y dentro de esas carpetas puede haber más carpetas o archivos.
 
 La estructura de carpetas se separa en Windows con el simbolo "\\" y en Linux con el símbolo "/" <!-- P3 -->, aunque Windows también suele reconocer las notaciones de Linux y ser más "flexible", por ejemplo Windows no distingue mayúsculas de minúsculas cosa que Linux y la mayoría de los lenguajes de programación si hacen. 
 
@@ -102,17 +102,17 @@ El primer **"./"** indica que se parte de la carpeta actual. El segundo **"../"*
 
 #### Algunas confusiones usuales
 
-En Windows (y no se si mac) <!-- P3 --> suele haber muchas confusiones cuando se trata de entender cómo funciona la estructura de archivos porque prioriza simplificar las cosas que muestra en función de un usuario que no quiere profundizar en como funciona el sistema. Un ejemplo de ello es lo que mencionamos antes cuando decíamos que en forma predeterminada oculta las extensiones de los archivos (y asume que cada programa va a guardar las cosas con la extensión correcta y que el usuario solo abre las cosas haciendo doble clic y por lo tanto puede ignorar la extensión mientras el archivo se abra). Otra situación que suele generar problemas es que existen muchas referencias simbólicas donde muestra 'carpetas' no en la estructura de archivos sino en otro lado, por ejemplos las "librerias" o los "Quick access" que se ven en la siguiente imagen:
+En Windows <!-- P3 --> suele haber muchas confusiones cuando se trata de entender cómo funciona la estructura de archivos porque prioriza simplificar las cosas que muestra en función de un usuario que no quiere profundizar en como funciona el sistema. Un ejemplo de ello es lo que mencionamos antes cuando decíamos que en forma predeterminada oculta las extensiones de los archivos (y asume que cada programa va a guardar las cosas con la extensión correcta y que el usuario solo abre las cosas haciendo doble clic y por lo tanto puede ignorar la extensión mientras el archivo se abra). Otra situación que suele generar problemas es que existen muchas referencias simbólicas donde muestra 'carpetas' no en la estructura de archivos sino en otro lado, por ejemplos las "librerias" o los "Quick access" que se ven en la siguiente imagen:
 
 ![Ejemplo de path simbolico](./Imagenes/Ejemplo3.png)
 
-Si miramos vamos a ver que "Desktop" aparece en tres lugares, arriba de todo en "Quick access", más abajo, entre "This PC" y el disco "C:\" y dentro de la carpeta "Users\Ionatan" que es donde realmente está. Además esa carpeta escritorio es la que vemos "como fondo" cuando minimizamos todas las ventanas. Para más confusión si tuviésemos el Windows configurado en español en algunos lugares figuraría como "Escritorio" pero la carpeta real se llamaría "Desktop". Algo parecido pasa con 'el disco' "Google Drive" que no es una unidad real sino una simulación que genera la aplicación de Google que sincroniza los archivos desde el servicio de Google Drive con la computadora local. La carpeta local genuina es una carpeta como cualquier otra que probablemente esté en "Mis Documentos", pero la app de Google nos genera referencias por todos lados para que lo tengamos 'a mano' que no son el lugar de la carpeta real. 
+Si miramos vamos a ver que "Desktop" aparece en tres lugares, arriba de todo en "Quick access", más abajo, entre "This PC" y el disco "C:\" y dentro de la carpeta "Users\Ionatan" que es donde realmente está. Además esa carpeta escritorio es la que vemos "como fondo" cuando minimizamos todas las ventanas. Para más confusión si tuviésemos el Windows configurado en español en algunos lugares figuraría como "Escritorio" pero la carpeta real se llamaría "Desktop". Algo parecido pasa con 'el disco' "Google Drive" que no es una unidad real sino una simulación que genera la aplicación de Google que sincroniza los archivos desde el servicio de Google Drive con la computadora local. La carpeta local genuina es una carpeta como cualquier otra que probablemente esté en "Mis Documentos", pero la app de Google nos genera referencias por todos lados para que lo tengamos 'a mano' aunque no sea el lugar de la carpeta real. 
 
 En Windows 10, el lugar real donde de manera predeterminada se ubican todas las carpetas con archivos personales (el escritorio, mis documentos, etc.) es en **"C:\users\\** *[Nombre del Usuario]* **\\"** pero por supuesto que cada programa o usuario puede guardar cosas en otros lados.
 
 #### El almacenamiento en la nube
 
-Además de tener archivos guardados físicamente en nuestros dispositivos es cada vez más común que todas nuestras cosas se sincronicen de una u otra manera con servidores que no nos pertenecen al nivel que a veces ni siquiera conservamos una copia en nuestras propias computadoras. 
+Además de tener archivos guardados físicamente en nuestros dispositivos es cada vez más común que todas nuestras cosas se sincronicen de una u otra manera con servidores de terceros al nivel que a veces ni siquiera conservamos una copia de nuestros archivos e información en nuestras propias computadoras. 
 
 Al margen de la discusión conceptual respecto a la privacidad y los derechos sobre la información, esto implica que estos archivos no siempre son fácilmente accesibles por fuera de las propias plataformas que usemos 'en la nube'. Por ejemplo si para editar planillas de cálculo usamos Google Spreadsheet el contenido de esas planillas solo existe en los servidores de Google (salvo que descarguemos esas planillas explícitamente en un formato diferente). Por lo general los servicios en la nube incluyen algún tipo de herramientas para compartir los archivos, pero hay que distinguir entre links que permitan descargar los archivos y links que lleven a los servidores de la empresa para que visualicemos o editemos los archivos desde allí. 
 
@@ -122,7 +122,7 @@ Una situación intermedia sucede cuando sincronizamos alguna carpeta de nuestra 
 
 Como mencionamos los sistemas operativos son mucho más que la interfaz gráfica que vemos y estamos acostumbrados a usar, y la mayoría de las cosas que suceden lo hacen por detrás de esa visualización. 
 
-Todos los sistemas operativos tienen una o varias maneras de interactuar con el mismo sin interfaz gráfica mediante instrucciones escritas en texto. Para poder escribir esas instrucciones existen consolas que las reciben e informan cosas (outputs de los programas). Obviamente en los sistemas operativos con interfaz gráfica esta consola se muestra dentro de una ventana como cualquier otro programa. 
+Todos los sistemas operativos tienen una o varias maneras de interactuar con el mismo sin interfaz gráfica mediante instrucciones escritas en texto. Para poder escribir esas instrucciones existen consolas que entienden estas instrucciones, las ejecutan e informan cosas (outputs de los programas). Obviamente en los sistemas operativos con interfaz gráfica esta consola se muestra dentro de una ventana como cualquier otro programa. 
 
 ![Consola de Windows](./Imagenes/12_Consola_1.png)
 
@@ -136,9 +136,9 @@ A la consola también se la suele llamar "Terminal" (porque en las primeras comp
 
 #### Estructura de la consola
 
-La consola es a la vez un lugar donde se pueden escribir comandos y ver qué mensajes dejan los comandos o programas que se ejecutan. Los comandos se escriben en la última línea (que es la que termina en ">") y un "_" nos muestra en donde se está escribiendo. Al presionar la tecla "Enter" se ejecutará todo lo que se haya escrito (que puede ocupar más de una línea si incluye nombre de archivos o carpetas largos). 
+La consola es a la vez un lugar donde se pueden escribir comandos y ver qué mensajes dejan los comandos o programas que se ejecutan. Los comandos se escriben en la última línea (que es la que termina en ">") y un "_" parpadeante nos muestra en donde se está escribiendo. Al presionar la tecla "Enter" se ejecutará todo lo que se haya escrito (que puede ocupar más de una línea si incluye nombre de archivos o carpetas largos). 
 
-A su vez la consola nos informa siempre en que carpeta estamos parados cuando ejecutamos un comando, en la imagen de arriba podemos ver **"C:\Users\Ionatan>"** lo que significa que lo que sea que vayamos a ejecutar se ejecutara en la carpeta **"C:\Users\Ionatan\\"**.
+A su vez la consola nos informa siempre en que carpeta estamos parados cuando ejecutamos un comando, en la imagen de arriba podemos ver **"C:\Users\Ionatan>"** lo que significa que lo que vayamos a ejecutar se ejecutará en la carpeta **"C:\Users\Ionatan\\"**.
 
 Los sistemas operativos incluyen algunos comandos básicos que permiten interactuar con el sistema de archivos (copiar, moverse entre carpetas, renombrar cosas, etc.). Por ejemplo en Windows el comando "dir" muestra el contenido de un directorio (el equivalente en Linux es "ls"). <!-- P3 -->En la siguiente imagen podemos ver lo que devuelve (el output) al hacer "dir" en la carpeta principal de un usuario de Windows. Como habíamos mencionado antes, en esta carpeta es donde de manera predeterminada están las carpetas "Mis Docuementos", "Escritorio", etc. Además hay cosas que cuando otros programas se instalan van agregando a esta carpeta. En Linux el "." delante de los archivos o carpetas indica que son archivos ocultos, es decir que no están pensando para que el usuario los vea en el día a día, sino para almacenar cosas de los propios programas. En Windows que un archivo esté configurado como oculto es una propiedad que se configura de otra manera, por eso estos archivos los muestra.
 
@@ -178,7 +178,7 @@ A continuación mostramos un ejemplo en Windows de como Git nos ofrece opciones 
 
 #### Permisos de administrador
 
-Todos los sistemas operativos tienen archivos e información que está pensada para que la edite y modifique cada usuario (porque tienen que ver con su contenido propio o sus preferencias) y archivos e información que es general del sistema operativo y no debería ser modificado por un usuario cualquier a menos que tenga intención de modificar cosas estructurales del sistema operativo. 
+Todos los sistemas operativos tienen archivos e información que está pensada para que la edite y modifique cada usuario (porque tienen que ver con su contenido propio o sus preferencias) y archivos e información que es general del sistema operativo y no debería ser modificado por un usuario cualquier a menos que tenga intención de modificar cosas estructurales de la computadora. 
 
 Esta distinción, además de evitar que un usuario común 'meta la pata', tiene una cuestión de seguridad vinculada. Si de alguna manera un código malicioso se ejecuta en la computadora a partir del accionar de un usuario común el código está imposibilitado de acceder o modificar la información sensible del sistema operativo. Para esto los sistemas operativos distinguen entre usuarios comunes y administradores. Muchas veces (generalmente cuando tenemos un solo usuario), en realidad el usuario es simultáneamente usuario común y administrador, pero para hacer ciertas acciones especiales el sistema operativo solicita acceso de administrador como medida de protección (esto suele incluir por ejemplo que se introduzca de nuevo la contraseña en Linux, o en Windows hay que dar ok a un mensaje). 
 

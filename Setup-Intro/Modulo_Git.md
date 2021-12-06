@@ -11,7 +11,7 @@ Git es un programa de control de versiones. ¿Qué significa eso? Que es un prog
 
 Probablemente más de una vez estabas editando un documento largo e importante quisiste guardar las versiones preliminares de lo que estabas haciendo (porque querías tener registro o por si necesitabas revertir algún cambio en el futuro). Lo que uno suele hacer en esos casos es ir cambiándole el nombre al archivo con cosas como miArchivoV1 o miArchivoV3_revisada. Para peor muchas veces ese mismo archivo lo tiene que revisar otra persona y entonces empezamos a complicar los nombres (porque entre que lo enviamos y recibimos las respuestas ya hicimos más modificaciones), o terminamos el trabajo y tenemos en la carpeta miArchivo_versionFinal_2_posta junto a todas las "versiones finales" anteriores. 
 
-Todos estos problemas se generan porque cada vez que queremos hacer modificaciones pensamos que lo lógico para preservar la información anterior es guardar una copia en un archivo diferente, cuando en realidad estamos generando un montón de información duplicada, y además estamos perdiendo el hilo de cuáles fueron las modificaciones hechas. Los programas usuales de computadora trabajan así, con un archivo y nos muestran todo su contenido, entonces si queremos preservar copias de versiones anteriores o queremos enviarle una copia a alguien para que la revise hay que hacer eso, copias y más copias. 
+Todos estos problemas se generan porque cada vez que queremos hacer modificaciones pensamos que lo lógico para preservar la información anterior es guardar una copia en un archivo diferente, cuando en realidad estamos generando un montón de información duplicada, y además estamos perdiendo el hilo de cuáles fueron las modificaciones hechas. Pero los programas usuales de computadora trabajan así, con un archivo y nos muestran todo su contenido, entonces si queremos preservar copias de versiones anteriores o queremos enviarle una copia a alguien para que la revise hay que hacer eso, copias y más copias. 
 
 ![Pagina Git](./Imagenes/ChisteApertura.png)
 
@@ -19,7 +19,7 @@ Una solución parcial a estos problemas la dan los editores y gestores de archiv
 
 ## Como los resuelve Git
 
-Imaginemos ahora que tenemos Git instalado y funcionando (ya vamos a ver cómo se hace esto más adelante), y queremos empezar a escribir un proyecto, por ejemplo el trabajo final de una materia. Para eso creamos una carpeta y empezamos a escribir una documento de Word. Creamos algunas imágenes (que guardamos en la misma carpeta) y después de un día de trabajo tenemos una primera versión (incompleta) del trabajo. Entonces lo que hacemos es "commitear" todo lo que hicimos. ¿Qué significa eso? Que le decimos a Git que revise que encontró de nuevo en nuestra carpeta y guarde un registro (Git guarda todos los registros internos en una carpeta que se llama '.git' dentro de la carpeta de nuestro proyecto). 
+Imaginemos ahora que tenemos Git instalado y funcionando (ya vamos a ver cómo se hace esto más adelante), y queremos empezar a escribir un proyecto, por ejemplo el trabajo final de una materia. Para eso creamos una carpeta y empezamos a escribir una documento de Word. Creamos algunas imágenes (que guardamos en la misma carpeta) y después de un día de trabajo tenemos una primera versión (incompleta). Entonces lo que hacemos es "commitear" todo lo que hicimos. ¿Qué significa eso? Que le decimos a Git que revise que encontró de nuevo en nuestra carpeta y guarde un registro (Git guarda todos los registros internos en una carpeta que se llama '.git' dentro de la carpeta de nuestro proyecto). 
 
 Al día siguiente nos damos cuenta que en realidad convenía organizar el contenido de otra manera y además agregamos un capítulo nuevo y tres imágenes más. Cuando terminamos de hacer los cambios volvemos a "commitear" y entonces Git no guarda ni sobreescribe una copia de lo que hicimos, sino que busca cuáles fueron las modificaciones respecto del "commit" anterior y guarda un registro histórico de esas modificaciones. De esta manera, si dos días después descubrimos que nos gustaba más el orden original de los capítulos podemos pedirle a Git que nos reconstruya y muestre cuál era el estado del archivo cuando hicimos el primer "commit", miramos cómo era esa versión del archivo, tomamos y recordamos lo que nos gustaba y después volvemos a la última versión para modificarlo en ese sentido y seguir trabajando.
 
@@ -37,7 +37,7 @@ Git también soluciona el problema de enviarle el archivo a otra persona y que n
 - Evaluamos cada modificación y decidimos cuáles queremos incorporar a nuestra versión del proyecto. O simplemente incorporamos todos los cambios en un paso. En caso de que haya algún conflicto (la otra persona modifico la misma frase que nosotros) podemos elegir que versión queremos quedarnos.
 - Seguimos trabajando con las revisiones incorporadas.
 
-Igualmente remarcamos que esta es la idea de como funcionaría, pero si la otra persona sabe usar Git hay una manera mucho mejor sencilla y elegante de hacerlo. 
+Igualmente remarcamos que esta es la idea de como funcionaría, pero si la otra persona sabe usar Git hay una manera mucho más sencilla y elegante de hacerlo. 
 
 ## Algunas funcionalidades más avanzadas de Git
 
