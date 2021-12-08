@@ -12,7 +12,7 @@ En este tutorial te contamos las cuestiones básicas de como funciona el sistema
 
 Git es un programa de control de versiones que sirve para ordenar y hacer seguimiento a los códigos que uno hace o modifica. Además Github es un servidor que permite tener copias online y compartidas de los proyectos en los que uno trabaja. Todo el material de curso lo vamos a compartir a través de un repositorio de Github, en este tutorial te contamos que es Git, como instalarlo y usarlo y como conseguir tu copia del material del curso. 
 
-## [Conda](./Modulo_%20Conda.md)
+## [Conda](./Modulo_Conda.md)
 
 Conda es un gestor de paquetes y librerías. Con Conda vamos a configurar un entorno de programación donde vamos a verificar tener todas las librerías necesarias en la versión correcta para el curso. Esto es importante no solo para saber que nos van a funcionar los códigos que ejecutemos sino también para que todos compartamos la misma versión de las librerías y de esa forma evitemos problemas, errores o dificultades a la hora de responder consultas. 
 
