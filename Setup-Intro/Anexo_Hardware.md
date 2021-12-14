@@ -17,7 +17,7 @@ Por último necesitamos que esa información procesada se refleje en algún camb
 
 ##### Motherboard
 
-Desde un punto de vista funcional, una PC se monta sobre el motherboard. El motherboard o "la mother" es un conjunto de electrónica, microcontroladores y cableado (o "bus" de conexión) que permiten la interconexión entre todas las demás partes de una computadora permitiendo que mediante ciertos estándares todas las partes que se conecten puedan comunicarse con las demás. 
+Desde un punto de vista funcional, una PC se monta sobre el motherboard. El motherboard o "la mother" es un conjunto de electrónica, microcontroladores y cableado (o "bus" de conexión) que permiten la interconexión entre todas las demás partes de una computadora permitiendo que mediante ciertos estándares todas las partes que se conecten y puedan comunicarse con las demás. 
 
 ![Imagen de una mother](./Imagenes/1_Mother.jpg)
 
@@ -29,7 +29,7 @@ Se llama periféricos a todos los componentes intercambiables (y no indispensabl
 
 ##### El gabinete 
 
-El gabinete es la estructura metálica o plástica típicamente paralelepípeda donde se alojan todos los elementos que no son periféricos. Dentro del mismo se coloca la mother con todos elementos que se conectan a la misma y suele incluir "la fuente" (que transforma la energía de línea a un voltaje adecuado para cada uno de los componentes) así como conectores en la parte delantera y trasera más cómodos y estéticos que los originales de la mother. El gabinete además da la estructura sólida para que se puedan colocar ventiladores que ayuden a disipar el calor así como proteger los componentes de la intemperie. Muchas veces se generaliza y se llama CPU al gabinete y todo lo que dentro del mismo.
+El gabinete es la estructura metálica o plástica típicamente paralelepípeda donde se alojan todos los elementos que no son periféricos. Dentro del mismo se coloca la mother con todos elementos que se conectan a la misma y suele incluir "la fuente" (que transforma la energía de línea a un voltaje adecuado para cada uno de los componentes) así como conectores en la parte delantera y trasera más cómodos y estéticos que los originales de la mother. El gabinete además da la estructura sólida para que se puedan colocar ventiladores que ayuden a disipar el calor así como proteger los componentes de la intemperie. Muchas veces se generaliza y se llama CPU al gabinete y todo lo que hay dentro del mismo.
 
 ![Gabinete](./Imagenes/3_Gabinete.png)
 
