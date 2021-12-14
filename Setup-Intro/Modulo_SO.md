@@ -14,11 +14,15 @@ Estamos acostumbrados a que la computadora es la imagen que vemos en una pantall
 
 El sistema operativo es a grandes rasgos un conjunto de muchos códigos que por un lado sabe cómo manipular el hardware y por otro nos ofrecen maneras lo más intuitivas posibles de indicarle a la computadora qué queremos hacer. El sistema operativo resuelve por nosotros la mayor parte de las cuestiones que tienen que ver con mantener la computadora andando de manera eficiente para que podamos usarla. Ver los archivos como dibujos en una pantalla, los programas como "ventanas" a través de las cuales podemos alternar o poder arrastrar cosas con el mouse o el dedo es exactamente eso, una manera muy cómoda e intuitiva de ver qué opciones nos ofrece la computadora y decirle que haga cosas muy complejas sin preocuparnos por cómo las hace.
 
+![LogoMac](./Imagenes/Logos.jpg)
+
 Sistemas operativos hay tantos como variantes de computadoras y códigos se quiera tener, sin embargo hoy día los sistemas operativos de las PC de escritorio (laptops) se pueden englobar en tres grandes variantes vinculadas a su lógica comercial y de funcionamiento.
 
 Por un lado tenemos los sistemas operativos privativos (donde el código que se ejecuta no es público y es creado y mantenido por grandes empresas), estos son Windows (el sistema operativo para PC de Microsoft) y macOS (el sistema operativo que ofrece Apple para las Mac cuyo hardware no es del todo compatible con las demás PCs). 
 
 Por otro lado tenemos sistemas operativos de código abierto desarrollados y mantenidos por la comunidad de programadores (y organizaciones sin fines de lucro cuya misión es coordinar y colaborar en el desarrollo de estos softwares). De estos hay muchas variantes, pero los más comunes son los que están basados en Linux (como Ubuntu, Mint, Fedora, etc.) que mantienen muy alto grado de compatibilidad entre sí y difieren en detalles de personalización.
+
+![LogoMac](./Imagenes/Distribuciones-linux.jpg)
 
 Si bien todos los sistemas operativos permiten al usuario ajustar y modificar su funcionamiento con diferente nivel de detalle, Linux, al ser la opción de código abierto no comercial, es la que mayor control y transparencia da al usuario a la hora de definir cómo y qué quiere que haga el sistema operativo.
 
