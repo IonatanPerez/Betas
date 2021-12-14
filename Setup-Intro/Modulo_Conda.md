@@ -2,7 +2,7 @@
 
 ## ¿Para qué sirven las librerías?
 
-Todos los lenguajes se construyen sobre un diseño básico que define reglas de sintaxis, operaciones y tipos de datos. Sobre eso los lenguajes ofrecen funciones prearmadas que en ese ambiente resuelven cosas puntuales. Por ejemplo si tenemos definido la suma y el producto podemos definir la potencia de un número. 
+Todos los lenguajes se construyen sobre un diseño básico que define reglas de sintaxis, operaciones y tipos de datos. Sobre eso, los lenguajes ofrecen funciones prearmadas que en ese ambiente resuelven cosas puntuales. Por ejemplo si tenemos definido la suma y el producto podemos definir la potencia de un número. 
 
 Todos los lenguajes buscan ofrecer al usuario la mayor cantidad de problemas usuales ya resueltos para que el programador se pueda focalizar en el diseño y la solución de los problemas específicos sin preocuparse de cuestiones operativas o recurrentes que otro ya puede haber pensado antes. 
 
@@ -86,7 +86,7 @@ Si estas en Windows deberías tener una carpeta que se vea de esta manera:
 
 ![Consola Dir](./Imagenes/Conda_Instalacion_4.png)
 
-En esta carpeta hay ocho archivos, tres (los que terminan en .sh) tienen instrucciones para ejecutar comandos de consola según el sistema operativo que usemos. El archivo .bat es similar al .sh de windows que es el que vamos a usar. <!-- Ver porque hay un .bat, si no se puede sacar-->Ademas tenemos tres archivos .txt con requerimientos de librerías vinculadas a diferentes cosas que vamos a ver en el curso. Por último tenemos un archivo .ipynb que es una notebook de Jupyter (ya vamos a ver que eso) que nos permite chequear que se haya instalado todo bien.
+En esta carpeta hay ocho archivos, tres (los que terminan en .sh) tienen instrucciones para ejecutar comandos de consola según el sistema operativo que usemos. El archivo .bat es similar al .sh pero es formato nativo de Windows, si ya instalaron Git pueden usar el ".bat" o el ".sh" sino tienen que usar el ".bat". Ademas tenemos tres archivos .txt con requerimientos de librerías vinculadas a diferentes cosas que vamos a ver en el curso. Por último tenemos un archivo .ipynb que es una notebook de Jupyter (ya vamos a ver que eso) que nos permite chequear que se haya instalado todo bien.
 
 Si ejecutamos el archivo setup_win.sh (podemos hacerlo con doble clic o yendo a la carpeta desde la consola y escribiendo su nombre) vamos a ver que se abre una nueva ventana donde se ejecuta su contenido. Como ya mencionamos Conda es lento en reconocer que cosas hay ya instaladas, que cosas no, e instalarlas, por lo que tenemos que tener paciencia hasta que se terminen de ejecutar todas las instrucciones. 
 
@@ -154,7 +154,7 @@ Entre estas librerías podemos destacar:
 - [scikit-learn](https://scikit-learn.org/stable/): librería fundamental para hacer ciencia de datos con modelos de aprendizaje, incluye y sistematiza todas las herramientas típicas necesarias para estas tareas.
 - [flask](https://flask.palletsprojects.com/en/2.0.x/): librería que permite embeber códigos de Python en un entorno html para desarrollar aplicaciones web.
 
-Además de las librerías que figuran en el archivo, durante la instalación Conda revisa que todas las dependencias que estas librerías necesitan estén satisfechas, para eso propone descargar, actualizar, instalar o modificar librerías que no mencionamos explícitamente.  
+Además de las librerías que figuran en el archivo, durante la instalación Conda revisa que todas las dependencias que estas librerías necesitan estén satisfechas, por eso cuando le pedimos que instale ciertas librerías puede que instale muchas más que las que pedimos explícitamente, porque sin las librerías extras lo que pedimos no funcionaria.  
 
 ```
 conda install -c conda-forge --yes --name dhdsblend2021 --file requirements_conda-forge.txt

@@ -1,6 +1,6 @@
 # Entornos de programación
 
-Un código de Python es en última instancia un archivo de texto donde cada línea se lee como una instrucción. Podríamos si queremos programar usando el bloc de notas. Sin embargo hay múltiples programas que hacen la experiencia de programar mucho más amigable, ya sea porque entienden la sintaxis y resaltan colores, porque incluyen opciones de autocompletar, de visualizar los archivos que involucran el proyecto entero, porque permiten ver resultados de la ejecución o porque permiten ejecutar paso a paso e ir viendo los valores de las variables. A estos programas se los llama IDE (Integrated Development Environment) y hay muchos. Uno de los más comunes es el Visual Studio Code (VSC).
+Un código de Python es en última instancia un archivo de texto donde cada línea se lee como una instrucción. Podríamos, si queremos, programar usando el bloc de notas. Sin embargo hay múltiples programas que hacen la experiencia de programar mucho más amigable, ya sea porque entienden la sintaxis y resaltan colores, porque incluyen opciones de autocompletar, de visualizar los archivos que involucran el proyecto entero, porque permiten ver resultados de la ejecución o porque permiten ejecutar paso a paso e ir viendo los valores de las variables. A estos programas se los llama IDE (Integrated Development Environment) y hay muchos. Uno de los más comunes es el Visual Studio Code (VSC).
 
 ![Consola Dir](./Imagenes/Jupyter_1.png)
 
@@ -14,7 +14,7 @@ Una de las funcionalidades más útiles que implementa ipython es la de poder pr
 
 Programar con notebooks tiene la gran ventaja de que no hay que volver a ejecutar todo el código cada vez que se cambia algo (por ejemplo queremos probar como cambia un resultado si tomamos dos o tres casos de una muestra) y entonces solo tenemos que reejecutar ese bloque de código. Además podemos generar dos bloques similares y comparar uno y otro sin necesidad de borrar los resultados anteriores. Para completar esta idea de cuaderno de notas, las notebooks de ipython permiten destinar celdas enteras a notas complementarias que vayan explicando cuál es el proceso por el que pasamos al construir nuestro código. 
 
-Como contrapartida usar las notebooks de ipython tiene dos desventajas que inducen a errores comunes. La primera es que al no reejecutar todo el código desde el principio cada vez que probamos algo, podemos estar pisando datos anteriores (o lo opuesto usando datos que quedaron cargados en memoria y no deberían estar). Obviamente esto se soluciona reejecutando todas las celdas de punta a punta y probando que este todo en orden. La segunda desventaja es que si bien para un trabajo tipo científico es cómodo tener segmentado y repetidos los códigos para visualizar lo ultimo que queremos probar, desde un punto de vista de eficiencia y buenas prácticas de programación conviene tener todo el código ordenado de manera lógica en un mismo bloque consistente. Es la razón por lo que la herramienta no está tan difundida en proyectos más enfocados en desarrollo de software, pero para hacer ciencia de datos es una herramienta muy cómoda.
+Como contrapartida usar las notebooks de ipython tiene dos desventajas que inducen a errores comunes. La primera es que al no reejecutar todo el código desde el principio cada vez que probamos algo, podemos estar pisando datos anteriores (o lo opuesto usando datos que quedaron cargados en memoria y no deberían estar). Obviamente esto se soluciona reejecutando todas las celdas de punta a punta y probando que este todo en orden. La segunda desventaja es que si bien para un trabajo tipo científico es cómodo tener segmentado y repetidos los códigos, desde un punto de vista de eficiencia y buenas prácticas de programación conviene tener todo el código ordenado de manera lógica en un mismo bloque consistente. Es la razón por lo que la herramienta no está tan difundida en proyectos más enfocados en desarrollo de software, pero para hacer ciencia de datos es una herramienta muy cómoda.
 
 ## Jupyter
 
@@ -24,13 +24,13 @@ El programa más difundido en Python para correr un servidor local que nos permi
 
 ### Como ejecutar Jupyter lab
 
-Para poder ejecutar correctamente Jupyter lab hay dos cosas importantes a considerar, en que entorno queremos que se ejecute (el entorno en que se ejecuta Jupyter determina el entorno en el que corren los códigos de las notebooks) y en que carpeta queremos que se ejecute (Jupyter nos va a mostrar y va a tener acceso a todos los archivos que haya dentro de la carpeta donde lo ejecutamos). Para elegir estas dos cosas vamos a usar una consola de Conda. Puede ser la consola general del sistema operativo si cuando instalamos Conda lo registramos, y sino podemos abrir una consola de Conda.
+Para poder ejecutar correctamente Jupyter lab hay dos cosas importantes a considerar, en que enviroment queremos que se ejecute (el enviroment en que se ejecuta Jupyter determina el enviroment en el que corren los códigos de las notebooks) y en que carpeta queremos que se ejecute (Jupyter nos va a mostrar y va a tener acceso a todos los archivos que haya dentro de la carpeta donde lo ejecutamos). Para elegir estas dos cosas vamos a usar una consola de Conda. Puede ser la consola general del sistema operativo si cuando instalamos Conda lo registramos, y sino podemos abrir una consola de Conda.
 
 ![Consola Dir](./Imagenes/Jupyter_Lab.gif)
 
 Lo primero es movernos en la estructura de archivos hasta donde queramos trabajar. En el ejemplo que mostramos elegimos la carpeta "Setup" dentro de la capeta donde descargamos todo el material disponible del curso. Con eso indicamos a Jupyter que carpeta de trabajo vamos a usar. 
 
-Lo segundo es seleccionar el entorno de python que queremos usar para nuestro proyecto. De manera predeterminada Conda usa el entorno se lo suele denominar 'Base' que según como se haya configurado al instalar además puede ser el que utilicen los demás programas del sistema operativo. Para cambiar de entorno tenemos que ejecutar 
+Lo segundo es seleccionar el enviroment (o entorno) de python que queremos usar para nuestro proyecto. Si no recuerdan que es esto pueden revisar la sección correspondiente a Conda del tutorial. De manera predeterminada Conda usa el entorno que se denomina 'Base' que es el compartido con todo el sistema operativo. Para cambiar de entorno tenemos que ejecutar 
 
 ```
 conda activate dhdsblend2021

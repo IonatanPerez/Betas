@@ -19,7 +19,7 @@ Una solución parcial a estos problemas la dan los editores y gestores de archiv
 
 ## Como los resuelve Git
 
-Imaginemos ahora que tenemos Git instalado y funcionando (ya vamos a ver cómo se hace esto más adelante), y queremos empezar a escribir un proyecto, por ejemplo el trabajo final de una materia. Para eso creamos una carpeta y empezamos a escribir una documento de Word. Creamos algunas imágenes (que guardamos en la misma carpeta) y después de un día de trabajo tenemos una primera versión (incompleta). Entonces lo que hacemos es "commitear" todo lo que hicimos. ¿Qué significa eso? Que le decimos a Git que revise que encontró de nuevo en nuestra carpeta y guarde un registro (Git guarda todos los registros internos en una carpeta que se llama '.git' dentro de la carpeta de nuestro proyecto). 
+Imaginemos ahora que tenemos Git instalado y funcionando (ya vamos a ver cómo se hace esto más adelante), y queremos empezar a escribir un proyecto, por ejemplo el trabajo final de una materia. Para eso creamos una carpeta y empezamos a escribir un documento de Word. Creamos algunas imágenes (que guardamos en la misma carpeta) y después de un día de trabajo tenemos una primera versión (incompleta). Entonces lo que hacemos es "commitear" todo lo que hicimos. ¿Qué significa eso? Que le decimos a Git que revise que encontró de nuevo en nuestra carpeta y guarde un registro (Git guarda todos los registros internos en una carpeta que se llama '.git' dentro de la carpeta de nuestro proyecto). 
 
 Al día siguiente nos damos cuenta que en realidad convenía organizar el contenido de otra manera y además agregamos un capítulo nuevo y tres imágenes más. Cuando terminamos de hacer los cambios volvemos a "commitear" y entonces Git no guarda ni sobreescribe una copia de lo que hicimos, sino que busca cuáles fueron las modificaciones respecto del "commit" anterior y guarda un registro histórico de esas modificaciones. De esta manera, si dos días después descubrimos que nos gustaba más el orden original de los capítulos podemos pedirle a Git que nos reconstruya y muestre cuál era el estado del archivo cuando hicimos el primer "commit", miramos cómo era esa versión del archivo, tomamos y recordamos lo que nos gustaba y después volvemos a la última versión para modificarlo en ese sentido y seguir trabajando.
 
@@ -131,7 +131,7 @@ Originalmente los archivos en la carpeta de trabajo son marcados como "sin segui
 
 La idea de que haya un Stage y no se incorpore directamente todo cambio al repositorio sirve entre otras cosas para que los commits tengan una lógica según el contenido y podamos commitear los archivos modificados que involucran un cierto contenido pero podamos no commitear los archivos cuya modificación responde a otra lógica. Recordemos que cada commit involucra una explicación de las modificaciones y es un punto en la historia de cambios que se va construyendo. 
 
-Además de las versiones locales de nuestro repositorio Git suele trabajar con un repositorio remoto (en algún servidor) con el que puede sincronizar las versiones locales de los archivos y sus modificaciones.
+Además de las versiones locales de nuestro repositorio, Git suele trabajar con un repositorio remoto (en algún servidor) con el que puede sincronizar las versiones locales de los archivos y sus modificaciones.
 
 ![Aceptar invitacion](./Imagenes/git_lifecircle.png)
 
