@@ -46,15 +46,15 @@ Otro ejemplo es la manipulación de imágenes. Para codificar imágenes se suele
 
 ![Codificando y decodificando](./Imagenes/10_Encoding.jpg)
 
-Es importante tener conciencia de estos detalles en el manejo de la información porque las secuencias de bits (que es como se guarda y se transmite la información), en sí, no representan nada si no sabemos cómo interpretarla. A veces pasa que no se usan los mismos estándares para generar la secuencia de bits (encoding) que para interpretarla (decoding) y eso puede generar múltiples tipos de problemas, ejemplo típico cuando vemos caracteres raros que no corresponden en los subtítulos de una serie o película.
+Es importante tener conciencia de estos detalles en el manejo de la información porque las secuencias de bits (que es como se guarda y se transmite la información), en sí no representan nada si no sabemos cómo interpretarla. A veces pasa que no se usan los mismos estándares para generar la secuencia de bits (encoding) que para interpretarla (decoding) y eso puede generar múltiples tipos de problemas, ejemplo típico cuando vemos caracteres raros que no corresponden en los subtítulos de una serie o película.
 
 ### Discos y unidades
 
-La estructura de archivos (que son los contenedores de las secuencias de bits) se guarda físicamente dentro de los discos. Las computadoras suelen venir con al menos un disco rígido, pero a veces tienen más de uno. Además se pueden conectar discos rígidos externos o unidades de almacenamiento como pendrives. Más adelante mencionaremos el almacenamiento "en la nube". <!-- P1 -->
+La estructura de archivos (que son los contenedores de las secuencias de bits) se guarda físicamente dentro de los discos. Las computadoras suelen venir con al menos un disco rígido, pero a veces tienen más de uno. Además se pueden conectar discos rígidos externos o unidades de almacenamiento como pendrives. Más adelante mencionaremos el almacenamiento "en la nube". 
 
 Sin embargo los discos físicos no son lo que vemos cuando usamos nuestro sistema operativo porque cada disco se puede partir en pedazos que funcionan para el sistema operativo como unidades diferentes. Por ejemplo, es común que cuando se instala un sistema operativo el mismo asigne parte del espacio físico del disco en particiones que usa en el arranque, como backup interno o como espacio de almacenamiento temporal (SWAP) y que no nos muestra (no tienen una letra asignada o no están "montadas"). 
 
-Siempre tiene que haber al menos una unidad que es donde el sistema operativo va a tener sus archivos principales (Windows que les asigna letras lo suele llamar "C:" y en Linux es "/"). Además puede haber otras que usemos para cosas diferentes (por ejemplo guardar los archivos personales en una unidad aparte para que no se mezclen con las cosas del sistema operativo, como si fuese un backup). Cuando conectamos un pendrive (o un disco externo) el sistema operativo los ve como una unidad diferente y le asigna una letra (en Windows) o un punto de montura (en Linux). <!-- P2 -->
+Siempre tiene que haber al menos una unidad que es donde el sistema operativo va a tener sus archivos principales (Windows lo suele llamar "C:" y en Linux es "/"). Además puede haber otras que usemos para cosas diferentes (por ejemplo guardar los archivos personales en una unidad aparte para que no se mezclen con las cosas del sistema operativo, como si fuese un backup). Cuando conectamos un pendrive (o un disco externo) el sistema operativo los ve como una unidad diferente y le asigna una letra (en Windows) o un punto de montura (en Linux). 
 
 En la siguiente imagen vemos un ejemplo (en Windows) de una computadora que tiene un único disco rígido (nombrado como "disco 0") que tiene tres unidades. Una esta reservada para el sistema y no se ve en el explorador de archivos, las otras dos figuran como unidades diferentes: el "Disco local C:" y el disco de "Datos D:". Como vemos además de la letra se les puede asignar un nombre descriptivo.
 
@@ -62,7 +62,7 @@ En la siguiente imagen vemos un ejemplo (en Windows) de una computadora que tien
 
 ### Nombres de archivos y carpetas
 
-Los archivos tienen un nombre (que aunque los sistemas operativos nuevos lo permiten es mejor que no tengan ni caracteres raros ni espacios) y una extensión. Ambas cosas se separan con un punto. La extensión no es más que un indicador de que tipo de contenido esperamos que haya dentro del archivo, pero no determina realmente el contendido. 
+Los archivos tienen un nombre (que aunque los sistemas operativos nuevos lo permiten es mejor que no tengan ni caracteres raros ni espacios) y una extensión. Ambas cosas se separan con un punto. La extensión no es más que un indicador del tipo de contenido que esperamos que haya dentro del archivo, pero no determina realmente el contendido. 
 
 #### La extensión 
 
@@ -74,11 +74,15 @@ Normalmente uno no crea los archivos desde cero, sino que los crea con un progra
 
 Para complicar más las cosas, en Windows se asume que el usuario no maneja los detalles detrás del sistema y de manera predeterminada el sistema operativo oculta las extensiones salvo que se cambie la configuración. La manera que tienen Windows de indicarnos que tipo de contenido debería tener un archivo es a través del icono con el que nos lo muestra. Para peor el sistema operativo acepta que un archivo tenga más de un punto "." en el nombre y solo considera el último como separado de extensiones. Entonces si tenemos un archivo que se llama "GranConfusion.pdf.zip" probablemente nos lo muestre con el icono de archivo comprimido, pero solo veamos "GranConfusion.pdf" en el explorador de archivos.
 
+A continuación mostramos como configurar en Windows 10 para que muestre las extensiones de los archivos (muy recomendado).
+
+![hide](./Imagenes/hide.gif)
+
 #### Las carpetas
 
-Los archivos además de tener un nombre y una extensión están en algún lugar dentro de la estructura de carpetas que hay en cada unidad. Todo el contenido de la unidad está en el directorio 'Raíz' que en Windows es la letra de la unidad seguida por ":\", típicamente "C:\", en Linux "/" y (Mac comparte la mayor parte del funcionamiento interno con Linux porque está basado en Linux)<!-- P3 -->. Dentro de esa carpeta raíz puede haber archivos, pero lo más usual es que haya solo carpetas, y dentro de esas carpetas puede haber más carpetas o archivos.
+Los archivos además de tener un nombre y una extensión están en algún lugar dentro de la estructura de carpetas que hay en cada unidad. Todo el contenido de la unidad está en el directorio 'Raíz' que en Windows es la letra de la unidad seguida por ":\", típicamente "C:\" y en Linux "/". Mac comparte la mayor parte del funcionamiento interno con Linux porque está basado en Linux. Dentro de esa carpeta raíz puede haber archivos, pero lo más usual es que haya solo carpetas, y dentro de esas carpetas puede haber más carpetas o archivos.
 
-La estructura de carpetas se separa en Windows con el simbolo "\\" y en Linux con el símbolo "/" <!-- P3 -->, aunque Windows también suele reconocer las notaciones de Linux y ser más "flexible", por ejemplo Windows no distingue mayúsculas de minúsculas cosa que Linux y la mayoría de los lenguajes de programación si hacen. 
+La estructura de carpetas se separa en Windows con el simbolo "\\" y en Linux con el símbolo "/", aunque Windows también suele reconocer las notaciones de Linux y ser más "flexible", por ejemplo Windows no distingue mayúsculas de minúsculas cosa que Linux y la mayoría de los lenguajes de programación si hacen. 
 
 De esta manera: 
 
@@ -136,15 +140,18 @@ Además de la consola que provee el sistema operativo, muchos otros programas di
 
 En Windows hay varias maneras de abrir una consola, la primera es buscar en el menú inicio "Command Prompt", la segunda es presionar en el teclado "Windows+R" (que es el atajo para ejecutar programas) y escribir "cmd". Es probable que les figure la opción de ejecutar la consola como usuario común o como administrador por el momento lo vamos a hacer como usuario común, más adelante vamos a charlar el tema de los privilegios de administrador y que implica.
 
-A la consola también se la suele llamar "Terminal" (porque en las primeras computadoras, antes de las PC, cada persona tenía físicamente un monitor y un teclado que era una terminal de una gran computadora). En Linux si buscamos la consola por lo general suele figurar como "Terminal", o se puede presiones "Ctrl+Alt+T" o "Ctrl+F2" que suelen ser atajos que abren una terminal. <!-- P3 -->
+
+![consola](./Imagenes/abrirconsola.gif)
+
+A la consola también se la suele llamar "Terminal" (porque en las primeras computadoras, antes de las PC, cada persona tenía físicamente un monitor y un teclado que era una terminal de una gran computadora). En Linux si buscamos la consola por lo general suele figurar como "Terminal", o se puede presiones "Ctrl+Alt+T" o "Ctrl+F2" que suelen ser atajos que abren una terminal.
 
 #### Estructura de la consola
 
-La consola es a la vez un lugar donde se pueden escribir comandos y ver qué mensajes dejan los comandos o programas que se ejecutan. Los comandos se escriben en la última línea (que es la que termina en ">") y un "_" parpadeante nos muestra en donde se está escribiendo. Al presionar la tecla "Enter" se ejecutará todo lo que se haya escrito (que puede ocupar más de una línea si incluye nombre de archivos o carpetas largos). 
+La consola es a la vez un lugar donde se pueden escribir comandos y ver qué mensajes dejan los comandos o programas que se ejecutan. Los comandos se escriben en la última línea donde un "_" parpadeante nos indica que estamos escribiendo. Al presionar la tecla "Enter" se ejecutará todo lo que se haya escrito (que puede ocupar más de una línea si incluye nombre de archivos o carpetas largos). 
 
 A su vez la consola nos informa siempre en que carpeta estamos parados cuando ejecutamos un comando, en la imagen de arriba podemos ver **"C:\Users\Ionatan>"** lo que significa que lo que vayamos a ejecutar se ejecutará en la carpeta **"C:\Users\Ionatan\\"**.
 
-Los sistemas operativos incluyen algunos comandos básicos que permiten interactuar con el sistema de archivos (copiar, moverse entre carpetas, renombrar cosas, etc.). Por ejemplo en Windows el comando "dir" muestra el contenido de un directorio (el equivalente en Linux es "ls"). <!-- P3 -->En la siguiente imagen podemos ver lo que devuelve (el output) al hacer "dir" en la carpeta principal de un usuario de Windows. Como habíamos mencionado antes, en esta carpeta es donde de manera predeterminada están las carpetas "Mis Docuementos", "Escritorio", etc. Además hay cosas que cuando otros programas se instalan van agregando a esta carpeta. En Linux el "." delante de los archivos o carpetas indica que son archivos ocultos, es decir que no están pensando para que el usuario los vea en el día a día, sino para almacenar cosas de los propios programas. En Windows que un archivo esté configurado como oculto es una propiedad que se configura de otra manera, por eso estos archivos los muestra.
+Los sistemas operativos incluyen algunos comandos básicos que permiten interactuar con el sistema de archivos (copiar, moverse entre carpetas, renombrar cosas, etc.). Por ejemplo en Windows el comando "dir" muestra el contenido de un directorio (el equivalente en Linux es "ls"). En la siguiente imagen podemos ver lo que devuelve (el output) al hacer "dir" en la carpeta principal de un usuario de Windows. Como habíamos mencionado antes, en esta carpeta es donde de manera predeterminada están las carpetas "Mis Docuementos", "Escritorio", etc. Además hay cosas que cuando otros programas se instalan van agregando a esta carpeta. En Linux el "." delante de los archivos o carpetas indica que son archivos ocultos, es decir que no están pensando para que el usuario los vea en el día a día, sino para almacenar cosas de los propios programas. En Windows que un archivo esté configurado como oculto es una propiedad que se configura de otra manera, por eso estos archivos los muestra.
 
 ![Consola Dir](./Imagenes/Consola_Ejemplo_Dir.png)
 
@@ -152,11 +159,11 @@ Los sistemas operativos incluyen algunos comandos básicos que permiten interact
 
 En la imagen anterior vemos que dentro de la carpeta en la que estábamos hay carpetas (las indicadas con **"\<DIR\>"**) y archivos (el resto). Además el comando "dir" nos muestra otra información que puede ser útil, como la fecha y hora de última modificación de los archivos o carpetas, el tamaño de los archivos en bytes (por ejemplo "MiPrograma.bat" ocupa 105 bytes) y el espacio que queda libre en la unidad. 
 
-El archivo "MiPrograma.bat" (que pueden descargar desde este [link](Archivos/MiPrograma.bat)) es un archivo que dentro tiene texto, pero al ponerle la extensión ".bat" le estamos indicando al sistema operativo que tiene instrucciones que se pueden ejecutar en una consola (lo mismo sucede si le ponemos extensión ".cmd"). Si abrimos el archivo con un editor de texto (si hacen doble clic lo van a ejecutar en lugar de abrir para ver el contenido) podemos ver que tiene dentro.
+El archivo "MiPrograma.bat" (que pueden descargar desde este [link](Archivos/MiPrograma.bat)) es un archivo que dentro tiene texto, pero al ponerle la extensión ".bat" le estamos indicando al sistema operativo que tiene instrucciones que se pueden ejecutar en una consola de Windows (lo mismo sucede si le ponemos extensión ".cmd", en linux en cambio se indica con ".sh"). Si abrimos el archivo con un editor de texto (si hacen doble clic lo van a ejecutar en lugar de abrir para ver el contenido) podemos ver que tiene dentro.
 
 ![Consola Dir](./Imagenes/EjemploBAT.png)
 
-Este código le pide a la computadora que entre en la carpeta "Music", que muestre que hay dentro y que renombre un archivo (que pueden [descargar](Archivos/CancionQueMeGusta.mp3) y colocar en su carpeta "Music") cuyo nombre es "CancionQueMeGusta.mp3" por "CancionQueNoMeGusta.mp3". La instrucción "rename" (al igual que la mayoría de las instrucciones) acepta parámetros, es decir información a considerar cuando tenga que hacer las cosas que pedimos. En este caso rename necesita primero el nombre del archivo original y luego el nombre nuevo que le queremos asignar. Una vez renombrado el archivo vuelve a hacer un "dir" para mostrar cómo quedó el contenido de la carpeta y por último intenta entrar a la carpeta "CancionQueMeGusta.mp3", lo cual claramente no tiene sentido y debería generar algún tipo de error.
+Este código le pide a la computadora que entre en la carpeta "Music", que muestre que hay dentro y que renombre un archivo (que pueden [descargar](Archivos/CancionQueMeGusta.mp3) y colocar en su carpeta "Music") cuyo nombre es "CancionQueMeGusta.mp3" por "CancionQueNoMeGusta.mp3". La instrucción "rename" (al igual que la mayoría de las instrucciones) acepta parámetros, es decir información a considerar cuando tenga que hacer las cosas que pedimos. En este caso rename necesita primero el nombre del archivo original y luego el nombre nuevo que le queremos asignar. Una vez renombrado el archivo el código vuelve a hacer un "dir" para mostrar cómo quedó el contenido de la carpeta y por último intenta entrar a la carpeta "CancionQueMeGusta.mp3", lo cual claramente no tiene sentido y debería generar algún tipo de error.
 
 Para ejecutar un programa desde la consola tenemos que poner el nombre (podemos ponerlo sin el ".bat"). Lo primero que hace el sistema operativo es ver si encuentra algo con ese nombre en la carpeta actual. Obviamente no todos los programas que tiene una computadora están en la carpeta actual por lo que a continuación el sistema operativo busca si tiene registrado algo que pueda ejecutar con ese nombre (como funciona esto depende de cada sistema operativo, pero suele haber algunas carpetas y archivos específicos donde se guarda esta información). Cuando los programas que usamos en la computadora se instalan, entre otras cosas, registran su nombre y donde hay que buscar el ejecutable correspondiente.
 
@@ -197,6 +204,4 @@ Como medida de seguridad general los programas no se deberían necesitar ejecuta
 - Cuando se quiere instalar un programa para todos los usuarios (muchos programas se pueden instalar solo para el usuario particular sin necesidad de modificar cosas del sistema operativo)
 - Cuando se quiere instalar o ejecutar un programa que altere cosas generales del sistema operativo
   
-Típicamente las cosas que se hacen en consola no necesitan acceso de administrador, pero a veces cuando estamos instalando librerías o funcionalidades extras por ejemplo en Anaconda (gestor de paquetes que vamos a usar para Python), dependiendo de que librerías se quiera instalar o modificar y de como se haya instalado Anaconda puede que si no ejecutamos la consola como administradores surja algún error. En todo caso es cuestión de aprender a leer los errores y, si es necesario, volver a ejecutar el comando como admin. A continuación mostramos un típico mensaje de error al tratar de modificar el nombre a un archivo del sistema operativo desde una consola que no es admin (no prueben hacer esto en sus compus!). 
-
-![Consola Permisos](./Imagenes/Consola_Privilegios.png)
+Típicamente las cosas que se hacen en consola no necesitan acceso de administrador, pero a veces cuando estamos instalando librerías o funcionalidades extras por ejemplo en Anaconda (gestor de paquetes que vamos a usar para Python), dependiendo de que librerías se quiera instalar o modificar y de como se haya instalado Anaconda puede que si no ejecutamos la consola como administradores surja algún error. En todo caso es cuestión de aprender a leer los errores y, si es necesario, volver a ejecutar el comando como admin.
